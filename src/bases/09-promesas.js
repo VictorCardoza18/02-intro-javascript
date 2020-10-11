@@ -1,6 +1,19 @@
 // Promesas
 import { getHeroeById } from "./bases/08-imp-exp";
 
+let x = 10;
+const promesa = new Promise((resolve, reject) => {
+  if (x === 10) {
+    resolve("Los numeros son iguales");
+  } else {
+    reject("Los numeros no son iguales");
+  }
+});
+
+promesa.then(console.log).catch(console.warn);
+
+// Mas ejemplos de promesas -----------------------------------
+
 export const getHeroeByIdAsync = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
